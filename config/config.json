@@ -1,0 +1,47 @@
+{
+  "development": {
+    "username": "gaming_platform_f3xx_user",
+    "password": "1nCKpCkmwocqrAA9Tpx5SoqS3mDj45vG",
+    "database": "gaming_platform_f3xx",
+    "host": "dpg-cu2hi6dds78s73dt7l70-a.ohio-postgres.render.com",
+    "port": "5432",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    },
+    "logging": false
+  },
+  "test": {
+    "username": "gaming_platform_f3xx_user",
+    "password": "1nCKpCkmwocqrAA9Tpx5SoqS3mDj45vG",
+    "database": "gaming_platform_f3xx",
+    "host": "dpg-cu2hi6dds78s73dt7l70-a.ohio-postgres.render.com",
+    "port": "5432",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    },
+    "logging": false
+  },
+  "production": {
+    "username": "gaming_platform_f3xx_user",
+    "password": "1nCKpCkmwocqrAA9Tpx5SoqS3mDj45vG",
+    "database": "gaming_platform_f3xx",
+    "host": "dpg-cu2hi6dds78s73dt7l70-a.ohio-postgres.render.com",
+    "port": "5432",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    },
+    "logging": false
+  }
+}
