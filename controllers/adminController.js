@@ -99,7 +99,7 @@ const getUsers = async (req, res) => {
     const users = await User.findAll();
     res.json(users);
   } catch (err) {
-    res.status(500).json({ message: "Error fetching users." });
+    res.status(500).json({ error: "Error fetching users." });
   }
 }
 
@@ -109,12 +109,12 @@ const deleteUser = async (req, res) => {
   try {
     const user = await User.findByPk(id);
     if (!user) {
-      return res.status(404).json({ message: "User not found" });
+      return res.status(404).json({ error: "User not found" });
     }
     await user.destroy();
     res.status(200).json({ message: "User deleted successfully" });
   } catch (err) {
-    res.status(500).json({ message: "Error deleting user." });
+    res.status(500).json({ error: "Error deleting user." });
   }
 };
 
@@ -123,7 +123,7 @@ const deleteAllTransactions = async (req, res) => {
     await Transaction.truncate();
     res.status(200).json({ message: "Transactions deleted successfully" });
   } catch (err) {
-    res.status(500).json({ message: "Error deleting transactions." });
+    res.status(500).json({ error: "Error deleting transactions." });
   }
 };
 
