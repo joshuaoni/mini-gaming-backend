@@ -10,6 +10,9 @@ const cors = require("cors");
 dotenv.config();
 const app = express();
 
+// Use the port provided by the environment or default to 8080 locally
+const PORT = process.env.PORT || 8080;
+
 app.use(cors());
 app.use(express.json());
 app.use("/api/users", authRoutes);
@@ -18,5 +21,5 @@ app.use("/api/game", gameRoutes);
 app.use("/api/admin", adminRoutes);
 
 sequelize.sync().then(() => {
-  app.listen(8080, () => console.log("Server running on port 8080"));
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 });
