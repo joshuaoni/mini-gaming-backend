@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "npm rebuild bcrypt --build-from-source"
-  },
+  "postinstall": "chmod +x ./node_modules/bcrypt/node_modules/node-pre-gyp/bin/node-pre-gyp && npm rebuild bcrypt --build-from-source"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
