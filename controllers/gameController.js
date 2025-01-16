@@ -9,8 +9,8 @@ const playGame = async (req, res) => {
 
   try {
     const user = await User.findByPk(userId);
-    if (!user) return res.status(404).json({ message: "User not found" });
-    if (+user.balance < amount) return res.status(400).json({ message: "Insufficient balance" });
+    if (!user) return res.status(404).json({ error: "User not found" });
+    if (+user.balance < amount) return res.status(400).json({ error: "Insufficient balance" });
 
     const serverSeed = crypto.randomBytes(16).toString("hex");
     const combinedSeed = `${serverSeed}:${clientSeed || "default-client-seed"}`;
